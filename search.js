@@ -1,17 +1,18 @@
 import {datas} from './Data.js'
 
-const name = document.querySelector("js-search-name").value;
-const searchName = document.querySelector(".js-search-button")
-searchName.addEventListener(("click"),()=>{
-}
+const searchName = document.querySelector(".js-search-name");
+const searchButton = document.querySelector(".js-search-button")
+searchButton.addEventListener(("click"),()=>{
+  search();
+})
 
 function search(){
-  members.forEach((search)=>{
-    if(search.name === searchName){
-      name = searchName;
-      console.log("{name} is a member!")
+  name = searchName.value;
+  datas.forEach((search)=>{
+    if(search.name === name){
+      console.log(`${name} is a member!`);
     }else{
-      console.log('Name Not Found!')
+      console.log(`${name} Not Found!`);
     }
   })
 }
