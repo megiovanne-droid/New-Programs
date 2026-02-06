@@ -6,6 +6,12 @@ searchButton.addEventListener(("click"),()=>{
   search();
 })
 
+window.addEventListener(("keydown"),(event)=>{
+  if(event.key === "Enter"){
+    search();
+  }
+})
+
 function search(){
   name = searchName.value;
   datas.forEach((search)=>{
