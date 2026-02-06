@@ -1,8 +1,9 @@
 import {datas, saveToStorage} from './Data.js'
 
 const phoneNumber = document.getElementById("js-phone-number");
-const emailAddress = document.getElementById("js-email-address")
-const submitButton = document.querySelector(".js-submit-button")
+const emailAddress = document.getElementById("js-email-address");
+const pass = document.getElementById("js-password");
+const submitButton = document.querySelector(".js-submit-button");
 
 submitButton.addEventListener("click",()=>{
   register();
@@ -17,6 +18,7 @@ window.addEventListener("keydown",(event)=>{
 function register(){
   const phone = phoneNumber.value;
   const email = emailAddress.value;
+  const password = pass.value;
   let matchUser;
 
   datas.forEach((user)=>{
@@ -31,6 +33,7 @@ function register(){
       id: crypto.randomUUID(),
       phoneNumber: phone,
       email: email,
+      passwprd: password,
       balance: 0
     })
     saveToStorage();

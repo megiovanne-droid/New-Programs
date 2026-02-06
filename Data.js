@@ -5,6 +5,7 @@ if(!datas){
   id: crypto.randomUUID(),
   phoneNumber: '09999999999',
   email: 'thedeveloper@gmail.com',
+  password: '12345678',
   balance: 999
 }];
 }
