@@ -1,22 +1,10 @@
-export const datas=[
-  {
-  name:'Ernesto Mantilla',
-  address:'Bitoon, Dumanjug, Cebu',
-  age: 50
-  },
-  {
-  name:'Eddie Villarma',
-  address:'Bitoon, Dumanjug, Cebu',
-  age: 55
-  },
-   {
-  name:'Clint Dapal',
-  address:'Bitoon, Dumanjug, Cebu',
-  age: 37
-  },
-   {
-  name:'Noel Escudro',
-  address:'Bitoon, Dumanjug, Cebu',
-  age: 39
-  }
-]
+export const datas=[]
+
+export function saveToStorage(){
+  localStorage.setItem('datas',JSON.stringify(datas));
+}
+
+export function getFromStorage(){
+  datas = JSON.parse(localStorage.getItem('datas'));
+  return datas;
+}
