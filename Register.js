@@ -16,7 +16,7 @@ window.addEventListener("keydown",(event)=>{
 
 function register(){
   const phone = phoneNumber.value;
-  const email =emailAddress.value;
+  const email = emailAddress.value;
   let matchUser;
 
   datas.forEach((user)=>{
@@ -33,7 +33,8 @@ function register(){
       email: email,
       balance: 0
     })
+    saveToStorage();
   }
-  saveToStorage();
+  document.querySelector(".js-notification").innerHTML=`${phone} already registered. Pls provided another number.`;
   console.log(datas);
-}
+  }
