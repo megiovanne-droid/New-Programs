@@ -15,12 +15,22 @@ window.addEventListener("keydown",(event)=>{
 
 function search(){
   const name = searchName.value;
+  let matchSearch;
 
   datas.forEach((search)=>{
     if(search.name === name){
-      console.log(`${name} is a member!`);
-    }else{
-      console.log(`${name} Not Found!`);
+      matchSearch = name;
     }
   })
+  if(matchSearch){
+      console.log(`${name} is a member.`)
+  }else{
+    datas.push({
+      name: name,
+      address:'Bitoon, Dumanjug, Cebu',
+      age: 39
+    }
+    )
+  }
+  console.log(datas);
 }
