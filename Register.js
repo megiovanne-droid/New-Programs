@@ -33,7 +33,7 @@ function register(){
       id: crypto.randomUUID(),
       phoneNumber: phone,
       email: email,
-      passwprd: password,
+      password: password,
       balance: 0
     })
     saveToStorage();

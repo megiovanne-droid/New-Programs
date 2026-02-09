@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Search From Database</title>
+    <title>Login Gams</title>
   </head>
   <body>
     <div>
@@ -9,27 +9,27 @@
       <input
       type="tel" 
       placeholder="09XXXXXXXXX" 
-      id="js-phone-number" 
+      id="js-login-number" 
       pattern="09[0-9]{9}"
       maxlength="11"
       required>
     </div>
 
     <div>
-      <label for="email">Email:</label>
+      <label for="password">Password:</label>
       <input
-      type="email" 
-      placeholder="example@gmail.com" 
-      id="js-email-address" 
+      type="password" 
+      placeholder="********" 
+      id="js-login-password" 
       required>
     </div>
 
-    <button class="js-submit-button">
+    <button class="js-submit-login">
       Submit
     </button>
 
     <p class="js-notification"></p>
     
-    <script src="Register.js" type="module"></script>
+    <script src="Login.js" type="module"></script>
   </body>
 </html>
