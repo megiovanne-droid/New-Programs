@@ -1,4 +1,6 @@
-const gameLog = [];
+import "./GameData.js"
+import "./PlayerData.js"
+
 let gameResult ='';
 
 function tossCoin(){
@@ -11,26 +13,25 @@ function tossCoin(){
 }
 
 function playGame(){
-  gameLog.push(
-    {
-      playId: crypto.randomUUID(),
-      result: {
-        coinOne: tossCoin(),
-        coinTwo: tossCoin(),
-        coinThree: tossCoin()
-      }
-    }
-  )
-  const currentGame = gameLog.length -1;
+  /*
+  const currentGame = gameLog.playResults.length -1;
 
   if (gameLog[currentGame].result.coinOne === "heads" && gameLog[currentGame].result.coinTwo === "heads" && gameLog[currentGame].result.coinThree === "heads"){
-    gameResult = "You Win!";
+    gameResult = "Win";
   }else if(gameLog[currentGame].result.coinOne === "tails" && gameLog[currentGame].result.coinTwo === "tails" && gameLog[currentGame].result.coinThree === "tails"){
-    gameResult = "You Loss!";
+    gameResult = "Loss";
   }
   else{
-    gameResult = "Game Draw!";
+    gameResult = "Draw";
   }
+
+  gameLog.push(
+    {
+    playId: '',
+    playResult: gameResult,
+    balanceMoney: 0
+    }
+  )*/
 
   document.querySelector(".js-display-result").innerHTML = gameResult;
 }
@@ -38,6 +39,8 @@ function playGame(){
 const playButton = document.querySelector(".js-play-button");
   playButton.addEventListener("click", ()=>{
     playGame();
-  })
+    console.log(playerData);
+  }
+)
 
 

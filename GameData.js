@@ -1,4 +1,4 @@
-import { playerData } from './PlayerData.js'
+import './PlayerData.js'
 
 class GameData{
   gameLog;
