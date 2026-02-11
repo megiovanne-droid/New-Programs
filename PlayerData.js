@@ -1,6 +1,4 @@
-import { login } from './Login.js'
-
-class userData {
+class PlayerData {
   userData;
   localStorageKey;
 
@@ -10,10 +8,9 @@ class userData {
   }
 
   loadFromStorage() {
-  this.userData = JSON.parse(localStorage.getItem('userData'));
-
+    this.userData = JSON.parse(localStorage.getItem(this.localStorageKey));
     if(!this.userData){
-      playerData = [{
+      this.userData = [{
       id: crypto.randomUUID(),
       phoneNumber: '09999999999',
       email: 'thedeveloper@gmail.com',
@@ -24,9 +21,8 @@ class userData {
   }
 
   saveToStorage(){
-    localStorage.setItem('userData',JSON.stringify(this.userData));
+    localStorage.setItem(this.localStorageKey,JSON.stringify(this.userData));
   }
 }
 
-const playerData = new PlayerData('user');
-playerData.loadFromStorage();
+export const playerData = new PlayerData('users');
